@@ -75,7 +75,7 @@ def logout():
 @app.route('/admin')
 @requires_auth
 def admin():
-	return render_template('admin.html'), 401
+	return render_template('admin.html')
 
 
 if __name__ == '__main__':
