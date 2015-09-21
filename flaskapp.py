@@ -1,6 +1,6 @@
 import os
 from datetime import datetime
-from flask import Flask, request, flash, url_for, redirect,/
+from flask import Flask, request, flash, url_for, redirect,\
  render_template, abort, send_from_directory
 
 
