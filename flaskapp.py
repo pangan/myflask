@@ -10,14 +10,14 @@ app = Flask(__name__)
 app.config.from_pyfile('flaskapp.cfg')
 
 
-CONFIG_FOLDER = ""
+CONFIG_FOLDER = os.path.dirname(os.path.realpath(__file__))
 
 
 def check_auth(username, password):
 	logins = dict()
 
 	try:
-		with open(CONFIG_FOLDER+'logins.json') as json_logins:
+		with open(CONFIG_FOLDER+'/logins.json') as json_logins:
 			logins = json.load(json_logins)
 			json_logins.close()
 	except Exception:
