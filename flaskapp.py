@@ -16,7 +16,7 @@ def check_auth(username, password):
 	logins = dict()
 
 	try:
-		with open(CONFIG_FOLDER+'/logins.json') as json_logins:
+		with open(CONFIG_FOLDER+'logins.json') as json_logins:
 			logins = json.load(json_logins)
 			json_logins.close()
 	except Exception, e:
@@ -53,7 +53,7 @@ def serveStaticResource(resource):
 
 @app.route("/test")
 def test():
-	app_path = os.getcwd()
+
     return "<strong>It's Alive! path = %s</strong>" %app_path
 
 @app.route('/logout')
