@@ -53,11 +53,11 @@ def serveStaticResource(resource):
 
 @app.route("/test")
 def test():
-
-    try:
+	try:
 		with open(CONFIG_FOLDER+'logins.json') as json_logins:
 			logins = json.load(json_logins)
 			json_logins.close()
+
 	except Exception, e:
 		return "error "
     
