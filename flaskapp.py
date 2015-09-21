@@ -27,7 +27,7 @@ def exit():
 
 @app.route('/admin')
 def logout():
-	return render_template('logout.html'), 401
+	return render_template('admin.html'), 401
 
 
 if __name__ == '__main__':
