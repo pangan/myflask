@@ -27,6 +27,10 @@ def test():
 def logout():
 	return render_template('logout.html'), 401
 
+@app.route('/admin')
+def logout():
+	return render_template('logout.html'), 401
+
 
 if __name__ == '__main__':
     app.run()
