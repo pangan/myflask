@@ -18,5 +18,13 @@ def serveStaticResource(resource):
 def test():
     return "<strong>It's Alive!</strong>"
 
+
+@app.route('/logout')
+def logout():
+	return render_template('logout.html'), 401
+
+
+
 if __name__ == '__main__':
     app.run()
+
