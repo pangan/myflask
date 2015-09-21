@@ -61,6 +61,7 @@ def test():
 		with open(CONFIG_FOLDER+'/logins.json') as json_logins:
 			logins = json.load(json_logins)
 			json_logins.close()
+			msg=logins
 
 	except Exception, e:
 		msg = "error %s" %(e)
