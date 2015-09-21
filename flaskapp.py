@@ -9,6 +9,8 @@ app = Flask(__name__)
 app.config.from_pyfile('flaskapp.cfg')
 
 
+CONFIG_FOLDER = ""
+
 
 def check_auth(username, password):
 	logins = dict()
@@ -51,7 +53,8 @@ def serveStaticResource(resource):
 
 @app.route("/test")
 def test():
-    return "<strong>It's Alive!</strong>"
+	app_path = os.getcwd()
+    return "<strong>It's Alive! path = %s</strong>" %app_path
 
 @app.route('/logout')
 def logout():
