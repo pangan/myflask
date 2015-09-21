@@ -56,17 +56,7 @@ def serveStaticResource(resource):
 
 @app.route("/test")
 def test():
-	app_path=os.path.dirname(os.path.realpath(__file__))
-	try:
-		with open(CONFIG_FOLDER+'/logins.json') as json_logins:
-			logins = json.load(json_logins)
-			json_logins.close()
-			msg=logins
-
-	except Exception, e:
-		msg = "error %s" %(e)
-
-	return "<strong>It's Alive! path = %s, %s</strong>" %(msg, app_path)
+	return "<strong>It's Alive!</strong>"
 
 @app.route('/logout')
 def logout():
