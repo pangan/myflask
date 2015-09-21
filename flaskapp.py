@@ -21,9 +21,8 @@ def serveStaticResource(resource):
 def test():
     return "<strong>It's Alive!</strong>"
 
-
-@app.route('/logout')
-def logout():
+@app.route('/exit')
+def exit():
 	return render_template('logout.html'), 401
 
 @app.route('/admin')
