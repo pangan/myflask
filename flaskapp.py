@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.config.from_pyfile('flaskapp.cfg')
 
 
-
+'''
 def check_auth(username, password):
 	logins = dict()
 
@@ -38,7 +38,7 @@ def requires_auth(f):
 		return f(*args, **kwargs)
 	return decorated
 
-
+'''
 
 @app.route('/')
 def index():
@@ -58,7 +58,7 @@ def logout():
 	return render_template('logout.html'), 401
 
 @app.route('/admin')
-@requires_auth
+#@requires_auth
 def logout():
 	return render_template('admin.html')
 
