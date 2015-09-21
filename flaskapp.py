@@ -1,4 +1,5 @@
 import os
+import sys
 from datetime import datetime
 from flask import Flask, request, flash, url_for, redirect,\
  render_template, abort, send_from_directory
@@ -53,15 +54,16 @@ def serveStaticResource(resource):
 
 @app.route("/test")
 def test():
-	try:
-		with open('../logins.json') as json_logins:
+	app_path=os.path.dirname(__file__)
+
+		with open('logins.json') as json_logins:
 			logins = json.load(json_logins)
 			json_logins.close()
 
 	except Exception, e:
-		return "error "
+		msg = "error "
 
-	return "<strong>It's Alive! path = </strong>"
+	return "<strong>It's Alive! path = %s</strong>" %(msg, app_path)
 
 @app.route('/logout')
 def logout():
