@@ -216,6 +216,12 @@ line-height: 1.4;
 
 .textbox {
 
+    border:1px solid;
+    border-radius: 15px;
+    padding: 10px;
+
+	margin: auto;
 	width:50%;
-	position:center;
+	
+	padding: 10px;
 }
