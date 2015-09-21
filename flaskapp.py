@@ -19,7 +19,7 @@ def check_auth(username, password):
 		with open(CONFIG_FOLDER+'logins.json') as json_logins:
 			logins = json.load(json_logins)
 			json_logins.close()
-	except Exception, e:
+	except Exception:
 		return False
 	
 	if username in logins:
@@ -58,8 +58,8 @@ def test():
 		with open(CONFIG_FOLDER+'logins.json') as json_logins:
 			logins = json.load(json_logins)
 			json_logins.close()
-	except Exception, e:
-		return "error %s"%(e)
+	except Exception:
+		return "error "
     return "<strong>It's Alive! path = </strong>"
 
 @app.route('/logout')
