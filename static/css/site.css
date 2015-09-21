@@ -213,3 +213,9 @@ line-height: 1.4;
    height:60px;   /* Height of the footer */
    /* background:#6cf; */
 }
+
+.textbox {
+
+	width:50%;
+	position:center;
+}
