@@ -10,7 +10,7 @@ app.config.from_pyfile('flaskapp.cfg')
 
 
 
-ef check_auth(username, password):
+def check_auth(username, password):
 	logins = dict()
 
 	try:
