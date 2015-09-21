@@ -56,8 +56,8 @@ def serveStaticResource(resource):
 def test():
 	app_path=os.path.dirname(__file__)
 	with open('logins.json') as json_logins:
-			logins = json.load(json_logins)
-			json_logins.close()
+		logins = json.load(json_logins)
+		json_logins.close()
 
 	except Exception, e:
 		msg = "error "
