@@ -60,8 +60,8 @@ def test():
 
 	except Exception, e:
 		return "error "
-    
-    return "<strong>It's Alive! path = </strong>"
+
+	return "<strong>It's Alive! path = </strong>"
 
 @app.route('/logout')
 def logout():
