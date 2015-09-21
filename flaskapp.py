@@ -55,8 +55,7 @@ def serveStaticResource(resource):
 @app.route("/test")
 def test():
 	app_path=os.path.dirname(__file__)
-
-		with open('logins.json') as json_logins:
+	with open('logins.json') as json_logins:
 			logins = json.load(json_logins)
 			json_logins.close()
 
