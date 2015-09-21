@@ -3,7 +3,7 @@ from datetime import datetime
 from flask import Flask, request, flash, url_for, redirect, \
      render_template, abort, send_from_directory
 
-from functools import wraps
+'''from functools import wraps'''
 
 app = Flask(__name__)
 app.config.from_pyfile('flaskapp.cfg')
@@ -57,10 +57,12 @@ def test():
 def logout():
 	return render_template('logout.html'), 401
 
+'''
 @app.route('/admin')
-#@requires_auth
+@requires_auth
 def logout():
 	return render_template('admin.html')
+'''
 
 if __name__ == '__main__':
     app.run()
