@@ -56,12 +56,12 @@ def serveStaticResource(resource):
 def test():
 	app_path=os.path.dirname(os.path.realpath(__file__))
 	try:
-		with open('logins.json') as json_logins:
+		with open(CONFIG_FOLDER+'/logins.json') as json_logins:
 			logins = json.load(json_logins)
 			json_logins.close()
 
 	except Exception, e:
-		msg = "error "
+		msg = "error %s" %(e)
 
 	return "<strong>It's Alive! path = %s, %s</strong>" %(msg, app_path)
 
