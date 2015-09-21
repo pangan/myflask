@@ -59,7 +59,7 @@ def test():
 			logins = json.load(json_logins)
 			json_logins.close()
 	except Exception, e:
-		return "error %s" %e
+		return "error %s"%(e)
     return "<strong>It's Alive! path = </strong>"
 
 @app.route('/logout')
